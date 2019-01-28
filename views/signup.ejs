@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="sources/ICON_1.ico" type="image/x-icon" media="screen">
+<link rel="stylesheet" type="text/css" href="css/loginSignin.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Login Register</title>
+<link rel="stylesheet" type="text/css" href="css/loginSignin.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="register">
+            <h2>Register</h2>
+        
+            <% if(message.length > 0) { %>
+                <div>
+                    <%= message %>
+                </div>
+            <% } %>
+        
+                <form id="registerform" action="/node/signup" method="post">
+                    <div id="labels">
+                        <label>Username:</label>
+                        <label>Password:</label>
+                        <label>Email:</label>
+                        <label>Main Interest:</label>
+                    </div>
+
+                    <div id="inputs">
+                <div class="form-group">
+
+                    <input type="text" class="form-control" name="username">
+                </div>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" name="password">
+                </div>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <select id="select" name="category">
+                        <option value="Mobilephone">Mobilephone</option>
+                        <option value="Television">Television</option>
+                        <option value="Tablet">Tablet</option>
+                        <option value="Computer">Computer</option>
+                    </select>
+                </div>
+            </div>
+                <br>
+                <button type="submit" class="submit">➔</button>
+                </form>
+            </div>
+
+        <p>Already got an account? <br><a href="login">Login</a></p>
+        <p>Go Back <br><a href="/node/">Home</a></p>
+    </div>
+</div>
+</body>
+
+</html>
